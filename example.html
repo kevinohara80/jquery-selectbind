@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Select Test</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="./select.js"></script>
+
+    <style type="text/css">
+      * {
+        font-family: Arial;
+      }
+      select, option {
+        font-size: 24px;
+      }
+      #main {
+        padding: 20px;
+      }
+    </style>
+
+    <script type="text/javascript">
+
+      $(document).ready(function() {
+        $('.select-child').selectBind('#select-parent', {
+          one: [
+            { value: 'val1', text: 'This is Value 1' },
+            { value: 'val2', text: 'This is Value 2' },
+            { value: 'val3', text: 'This is Value 3' }
+          ],
+          two: [
+            { value: 'val2', text: 'This is Value 2' }
+          ]
+        });
+      });
+
+    </script>
+
+  </head>
+
+  <body>
+    <div id="main">
+      <h1>Select Test</h1>
+      <p>
+        <select id="select-parent">
+          <option value="one">One</option>
+          <option value="two">Two</option>
+          <option value="three">Three</option>
+          <option value="four">Four</option>
+        </select>
+      </p>
+      <p>
+        <select class="select-child">
+
+        </select>
+      </p>
+      <p>
+        <select class="select-child">
+
+        </select>
+      </p>
+    </div>
+  </body>
+
+</html>
