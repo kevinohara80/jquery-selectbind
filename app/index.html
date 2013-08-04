@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>			 <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>				 <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>				 <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>jQuery selectBind</title>
+		<meta name="description" content="Create dependent select lists.">
+		<meta name="viewport" content="width=device-width">
+
+		<link rel="stylesheet" href="styles/main.css">
+		<script src="components/modernizr/modernizr.js"></script>
+	</head>
+
+	<body>
+
+		<!--[if lt IE 7]>
+				<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+		<![endif]-->
+
+		<!-- Add your site or application content here -->
+
+		<div class="page">
+
+			<header role="banner">
+				<h1>jQuery selectBind</h1>
+				<span class="tagline">Create dependent select lists.</span>
+			</header>
+
+			<main role="main">
+
+					<div class="select__container">
+					<select class="select--parent" data-selectBind>
+						<option value="one">One</option>
+						<option value="two">Two</option>
+						<option value="three">Three</option>
+						<option value="four">Four</option>
+					</select>
+					<button class="button--dropdown select__action">▾</button>
+				</div>
+					<select class="select-child"></select>
+					<select class="select-child"></select>
+
+			</main>
+
+			<footer role="contentinfo">
+			</footer>
+
+		</div>
+
+		<!-- build:js scripts/main.js -->
+		<script data-main="scripts/main" src="components/requirejs/require.js"></script>
+		<!-- endbuild -->
+
+	</body>
+</html>
