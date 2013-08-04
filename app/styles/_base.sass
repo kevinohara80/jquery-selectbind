@@ -1,6 +1,20 @@
+*, *:before, *:after
+	+box-sizing('border-box')
+
 html
+	background: $quadrary
+	color: $secondary
+	$background-grid-color: shade($quadrary, 20%)
 	+background-grid
+	@extend %copy
 
 .page
-	+grid-span(3, 2)
 
+[role=banner]
+	text-align: center
+	background: $secondary
+	color: $quadrary
+	+trailer
+
+@import base/headlines
+@import base/buttons

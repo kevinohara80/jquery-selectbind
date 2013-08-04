@@ -1,0 +1,38 @@
+@import singularitygs
+$grids: 1 4 4 4 1
+
+select, .select
+	+appearance(none)
+	border: 0
+	+border-radius(0)
+	margin: 0
+	display: block
+	+adjust-font-size-to(ms(0))
+	background: transparent
+	color: $primary
+	clear: left
+	width: 100%
+	padding: 0 ms(1)
+	+rhythm(0, .5, .5, 0)
+	+isolation-span(4, 1)
+	&:focus
+		outline: 0
+
+.select__container
+	overflow: hidden
+	background: $tertiary
+	text-align: right
+	+trailer(1)
+	> select
+		width: 100%
+		&:focus
+			background: $secondary
+
+.select--parent
+
+.select__action
+	+isolation-span(1, 5)
+	pointer-events: none
+	+rhythm(0, .5, .5, 0)
+	background: shade($tertiary, 30%)
+	color: $tertiary
