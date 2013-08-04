@@ -1,0 +1,6 @@
+temp
+.tmp
+dist
+*.sass-cache
+components
+node_modules
