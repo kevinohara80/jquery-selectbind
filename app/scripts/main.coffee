@@ -7,7 +7,7 @@ require.config
 
 require ['jquery', 'selectBind'], ($, selectBind) ->
 	$ ->
-		$('.select-child').selectBind '[data-selectBind]',
+		$('[data-selectBind=child]').selectBind '[data-selectBind=parent]',
 			one: [
 				value: "val1"
 				text: "This is Value 1"

@@ -1,38 +1,65 @@
-@import singularitygs
-$grids: 1 4 4 4 1
-
 select, .select
+	display: block
+	width: 100%
+	+user-select(none)
 	+appearance(none)
 	border: 0
 	+border-radius(0)
 	margin: 0
-	display: block
 	+adjust-font-size-to(ms(0))
 	background: transparent
 	color: $primary
-	clear: left
-	width: 100%
 	padding: 0 ms(1)
 	+rhythm(0, .5, .5, 0)
-	+isolation-span(4, 1)
+	+transition(background .2s linear)
 	&:focus
 		outline: 0
 
-.select__container
+[class*=select__container]
+	position: relative
 	overflow: hidden
 	background: $tertiary
-	text-align: right
 	+trailer(1)
 	> select
-		width: 100%
 		&:focus
 			background: $secondary
+			color: $quadrary
+			+ .select__action
+				background: shade($secondary, 20%)
+				color: $secondary
 
-.select--parent
+.select__container--parent
+	+breakpoint($med)
+		+grid-span(2, 2)
+
+.select__container--child
+	+grid-span(2, 2)
+	clear: left
+	background: $primary
+	+breakpoint($med)
+		+grid-span(1, 2)
+		clear: left
+	&:last-of-type
+		+breakpoint($med)
+			+grid-span(1, 3)
+
+	> select
+		color: $quadrary
+
+	&:focus
+		background: $secondary
+		color: $quadrary
+		+ .select__action
+			background: shade($secondary, 20%)
+			color: $secondary
 
 .select__action
-	+isolation-span(1, 5)
+	position: absolute
+	top: 0
+	right: 0
+	+user-select(none)
 	pointer-events: none
 	+rhythm(0, .5, .5, 0)
 	background: shade($tertiary, 30%)
 	color: $tertiary
+	+grid-span(1, 4)

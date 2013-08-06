@@ -11,7 +11,6 @@
 		<meta name="viewport" content="width=device-width">
 
 		<link rel="stylesheet" href="styles/main.css">
-		<script src="components/modernizr/modernizr.js"></script>
 	</head>
 
 	<body>
@@ -31,8 +30,8 @@
 
 			<main role="main">
 
-					<div class="select__container">
-					<select class="select--parent" data-selectBind>
+					<div class="select__container--parent">
+					<select class="select--parent" data-selectBind="parent">
 						<option value="one">One</option>
 						<option value="two">Two</option>
 						<option value="three">Three</option>
@@ -40,12 +39,24 @@
 					</select>
 					<button class="button--dropdown select__action">▾</button>
 				</div>
-					<select class="select-child"></select>
-					<select class="select-child"></select>
+					<div class="select__container--child">
+						<select data-selectBind="child" class="select--child"></select>
+						<button class="button--dropdown select__action">▾</button>
+					</div>
+					<div class="select__container--child">
+						<select data-selectBind="child" class="select--child"></select>
+						<button class="button--dropdown select__action">▾</button>
+					</div>
 
 			</main>
 
 			<footer role="contentinfo">
+				<ul class="nav--social">
+					<li class="nav--social__item">
+						<a href="https://github.com/kevinohara80/jquery-selectbind">Contribute</a>
+					<li class="nav--social__item">
+						<a href="https://twitter.com/kevino8://twitter.com/kevino80">Follow</a>
+				</ul>
 			</footer>
 
 		</div>

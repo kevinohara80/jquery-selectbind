@@ -1,0 +1,25 @@
+[class*=nav]
+	text-align: center
+
+[class*=nav][class*=item]
+	+grid-span(1, 2)
+	+breakpoint($med)
+		+grid-span(1, 2)
+	&:last-of-type
+		+grid-span(1, 3)
+		+breakpoint($med)
+			+grid-span(1, 3)
+	> a
+		text-decoration: none
+		clear: left
+		font-weight: 900
+		text-transform: uppercase
+		display: block
+		background: $secondary
+		padding: rhythm(.5) msem(0)
+		color: $quadrary
+		+transition(background .2s linear)
+		&:visited
+			color: $quadrary
+		&:hover
+			background: $tertiary

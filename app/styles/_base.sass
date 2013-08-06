@@ -1,3 +1,6 @@
+@import base/headlines
+@import base/buttons
+
 *, *:before, *:after
 	+box-sizing('border-box')
 
@@ -5,7 +8,7 @@ html
 	background: $quadrary
 	color: $secondary
 	$background-grid-color: shade($quadrary, 20%)
-	+background-grid
+	//+background-grid
 	@extend %copy
 
 .page
@@ -16,5 +19,10 @@ html
 	color: $quadrary
 	+trailer
 
-@import base/headlines
-@import base/buttons
+[role=main], [role=contentinfo]
+	+clearfix
+	max-width: 53.25em
+	margin: 0 auto
+
+[role=main]
+	+trailer(2)
