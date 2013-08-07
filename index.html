@@ -1,9 +1,67 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>jQuery selectBind</title>
-  </head>
-  <body>
-    <h1>Hello World</h1>
-  </body>
+<!--[if lt IE 7]>			 <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>				 <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>				 <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>jQuery selectBind</title>
+		<meta name="description" content="Create dependent select lists.">
+		<meta name="viewport" content="width=device-width">
+
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+
+	<body>
+
+		<!--[if lt IE 7]>
+				<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+		<![endif]-->
+
+		<!-- Add your site or application content here -->
+
+		<div class="page">
+
+			<header role="banner">
+				<h1>jQuery selectBind</h1>
+				<span class="tagline">Create dependent select lists.</span>
+			</header>
+
+			<main role="main">
+
+					<div class="select__container--parent">
+					<select class="select--parent" data-selectbind="parent">
+						<option value="one">One</option>
+						<option value="two">Two</option>
+						<option value="three">Three</option>
+						<option value="four">Four</option>
+					</select>
+					<button class="button--dropdown select__action">▾</button>
+				</div>
+					<div class="select__container--child">
+						<select data-selectbind="child" class="select--child"></select>
+						<button class="button--dropdown select__action">▾</button>
+					</div>
+					<div class="select__container--child">
+						<select data-selectbind="child" class="select--child"></select>
+						<button class="button--dropdown select__action">▾</button>
+					</div>
+
+			</main>
+
+			<footer role="contentinfo">
+				<ul class="nav--social">
+					<li class="nav--social__item">
+						<a href="https://github.com/kevinohara80/jquery-selectbind">Contribute</a>
+					</li><li class="nav--social__item">
+						<a href="https://twitter.com/kevino80">Follow</a>
+				</li></ul>
+			</footer>
+
+		</div>
+
+		<script data-main="scripts/main" src="components/requirejs/require.js"></script>
+
+	</body>
 </html>
